@@ -1,6 +1,12 @@
 package com.Integrador.proyecto.datos;
 
+
+import nonapi.io.github.classgraph.json.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "users")
 public class User {
+    @Id
     private Long id;
     private String name;
     private String email;
@@ -38,3 +44,4 @@ public class User {
         this.email = email;
     }
 }
+
